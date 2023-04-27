@@ -3,7 +3,7 @@ ESX Drugs run script for Fivem Roleplay servers<br>
 
 This script features a run-like system, where the drug seller (player) has to interact with a main dealer/broker, to get locations of his subdealers. The player then has to drive to those subdealers, to sell a configurable amount of drugs there. After the sale, the player can either choose to continue the run or to stop selling drugs. <br>
 
-A configurable option is also to alert people with certain jobs (police, or gangs) of the deal. In a configurable probability of occasionality, a phone message or a notification, depending on configuration, is sent to the configured jobs.
+A configurable option is also to alert people with certain jobs (police, or gangs) of the deal. In a configurable probability of occasionality, a phone message or a notification, depending on configuration, is sent to the players with the specified jobs.
 
 # How it works
 - Player drives to the location where the main dealer or broker is standing.<br>
@@ -21,5 +21,8 @@ As of right now, the script is still a work-in-progress and thus is not fully co
 - es_extended <br>
 - ox_lib & ox_inventory <br>
 - lb_phone or any notification system. <br>
+
+# Installation:
+- Clone the repository, and configure the config.lua & notify.lua to your liking.
 
 Feel free to recommend me updates, or to leave some constructive criticism. Would love that.<br>

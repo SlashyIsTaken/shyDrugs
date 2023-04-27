@@ -126,7 +126,7 @@ AddEventHandler('shyDrugs:DistCheck', function(coords, nr)
                             {type = 'number', label = Config.Translations.sellprompt, description = '1 = Coke, 2 = Meth, 3 = Weed', icon = 'hashtag'},
                             {type = 'checkbox', label = Config.Translations.stopsell}
                         })
-                        if input[1] then
+                        if input then
                             if input[1] > 0 and input[1] < 4 then
                                 FreezeEntityPosition(PlayerPedId(), true)
                                 if lib.progressCircle({
@@ -138,8 +138,8 @@ AddEventHandler('shyDrugs:DistCheck', function(coords, nr)
                                         car = true,
                                     },
                                     anim = {
-                                        dict = 'mp_common',
-                                        clip = 'givetake2_a'
+                                        dict = 'mp_weapons_deal_sting',
+                                        clip = 'crackhead_bag_loop'
                                     },
                                 }) then
                                     FreezeEntityPosition(PlayerPedId(), false)
@@ -192,4 +192,15 @@ AddEventHandler('shyDrugs:NextOrder', function(success, again)
         isDealing = false
         TriggerServerEvent('shyDrugs:EndDeal', success)
     end
+end)
+
+RegisterNetEvent('shyDrugs:notify')
+AddEventHandler('shyDrugs:notify', function(title, text, style)
+    Notify(title, text, style)
+end)
+
+RegisterNetEvent('shyDrugs:waypoint')
+AddEventHandler('shyDrugs:waypoint', function(coords)
+    DeleteWaypoint()
+    SetNewWaypoint(coords)
 end)

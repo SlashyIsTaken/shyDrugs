@@ -10,5 +10,9 @@ shared_scripts {
     'config.lua'
 }
 
-client_script 'client/main.lua'
+client_scripts {
+    'client/main.lua',
+    'notify.lua'
+}
+
 server_script 'server/main.lua'

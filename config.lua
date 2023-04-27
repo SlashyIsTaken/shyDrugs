@@ -2,6 +2,10 @@ Config = {}
 
 Config.SQLBan = false -- Enable if using SQLban. CAUTION: Do check if the trigger matches yours. server/main.lua, line 129
 
+Config.lbphone = true -- True: enable lb_phone messages as notifications. False: use the notify.lua
+
+Config.Webhook = 'WEBHOOK' -- Discord logging
+
 Config.dealerPed = 'a_m_m_hasjew_01'
 Config.dealerPos = {970.7463, -1144.4193, 25.2000, 153.79}
 
@@ -16,7 +20,7 @@ Config.GangJobs = {
     -- etc
 }
 
-Config.MaxSell = 10 -- How many units can be sold at one location
+Config.MaxSell = 50 -- How many units can be sold at one location
 Config.DealDuration = 15000 -- 15 seconds
 
 Config.cokeItem = 'coke_brick'
@@ -32,7 +36,8 @@ Config.weedPriceMax = 700 -- Price per weed pouch
 Config.weedPriceMin = 500
 
 Config.Translations = { -- don't change the blue variables, do change the text between "".
-    talk = "Talk with Mohammed",
+    name = 'Mohammed',
+    talk = 'Talk with Mohammed',
     talk2 = 'Talk with the dealer',
     busy = 'You are already dealing!',
     busydesc = 'Real men can only do one thing at a time!',
@@ -43,7 +48,8 @@ Config.Translations = { -- don't change the blue variables, do change the text b
     backtoboss = 'Go back to my boss.',
     nothing = 'Wasting my time, not even filling my form in!',
 
-    go = 'Go to the following location:',
+    go = 'Go to the next location:',
+    goNotify = 'Go to the next location. Waypoint set!',
     pouchfull = 'Your pouches are full. Come prepared next time!',
     minimum = 'You need a minimum of 10 units. No less.',
     serious = 'You kidding me? COME. PREPARED.',

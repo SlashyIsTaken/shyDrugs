@@ -1,5 +1,6 @@
 ESX = nil
 lastloc = {}
+local Webhook = 'WEBHOOK'
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
@@ -220,6 +221,6 @@ function sendToDiscord(name, message, color)
               },
           }
       }
-    PerformHttpRequest(Config.Webhook, function(err, text, headers) end, 'POST', json.encode({username = 'shyDrugs', embeds = connect, avatar_url = 'https://static.vecteezy.com/system/resources/previews/006/428/710/original/cool-fox-with-sharp-eyes-mascot-logo-design-free-vector.jpg'}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(Webhook, function(err, text, headers) end, 'POST', json.encode({username = 'shyDrugs', embeds = connect, avatar_url = 'https://static.vecteezy.com/system/resources/previews/006/428/710/original/cool-fox-with-sharp-eyes-mascot-logo-design-free-vector.jpg'}), { ['Content-Type'] = 'application/json' })
 end
 sendToDiscord("Script Restarted", "New logging session initialized.", 16711851)

@@ -1,10 +1,10 @@
 Config = {}
 
+-- To change the webhook, please do so in server/main.lua, line 3
+
 Config.SQLBan = false -- Enable if using SQLban. CAUTION: Do check if the trigger matches yours. server/main.lua, line 129
 
 Config.lbphone = true -- True: enable lb_phone messages as notifications. False: use the notify.lua
-
-Config.Webhook = 'WEBHOOK' -- Discord logging
 
 Config.dealerPed = 'a_m_m_hasjew_01'
 Config.dealerPos = {970.7463, -1144.4193, 25.2000, 153.79}

@@ -38,6 +38,7 @@ Citizen.CreateThread(function()
             end
         elseif show then
             lib.hideTextUI()
+            show = false
         end
         Citizen.Wait(100 + math.floor(shortestDistance * 10))
     end
